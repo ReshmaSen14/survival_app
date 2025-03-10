@@ -1,7 +1,9 @@
 # ASSIGNMENT
 # SURVIVAL ANALYTICS - STREAMLIT CODE
 # RESHMA SEN N
-
+import os
+os.system("pip install --upgrade pip && pip install matplotlib pandas streamlit lifelines openpyxl")
+import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
