@@ -1,9 +1,17 @@
 # ASSIGNMENT
 # SURVIVAL ANALYTICS - STREAMLIT CODE
 # RESHMA SEN N
-import os
-os.system("pip install --upgrade pip && pip install matplotlib pandas streamlit lifelines openpyxl")
-import matplotlib.pyplot as plt
+import subprocess
+import sys
+
+# Install missing packages
+def install_packages():
+    required_packages = ["matplotlib", "pandas", "streamlit", "lifelines", "openpyxl"]
+    for package in required_packages:
+        subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", package], check=True)
+
+install_packages()
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
