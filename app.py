@@ -4,9 +4,11 @@
 import subprocess
 import sys
 
-# Check installed packages
-installed_packages = subprocess.run([sys.executable, "-m", "pip", "freeze"], capture_output=True, text=True)
-print(installed_packages.stdout)  # Print all installed packages
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "matplotlib"], check=True)
+    import matplotlib.pyplot as plt 
 
 import streamlit as st
 import pandas as pd
