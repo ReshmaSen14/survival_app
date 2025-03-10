@@ -1,6 +1,12 @@
 # ASSIGNMENT
 # SURVIVAL ANALYTICS - STREAMLIT CODE
 # RESHMA SEN N
+import subprocess
+import sys
+
+# Check installed packages
+installed_packages = subprocess.run([sys.executable, "-m", "pip", "freeze"], capture_output=True, text=True)
+print(installed_packages.stdout)  # Print all installed packages
 
 import streamlit as st
 import pandas as pd
